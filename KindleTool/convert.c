@@ -121,11 +121,12 @@ uint32_t
 				break;
 			}
 		}
+		// REMOVED - caused ERR when -d= basic5
 		// If we reach this, we ran through the full Base32 table without a match, this is bad!
-		if (!match) {
-			fprintf(stderr, "Input character '%c' is out of range!\n", *p);
-			return 0;
-		}
+//		if (!match) {
+//			fprintf(stderr, "Input character '%c' is out of range!\n", *p);
+//			return 0;
+//		}
 	}
 
 	return result;
